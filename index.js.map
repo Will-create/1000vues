@@ -1,0 +1,36 @@
+{
+	"routes": [
+		{
+			"method": "GET",
+			"url": "/docs/"
+		},
+		{
+			"method": "API",
+			"url": "/api/",
+			"id": "account",
+			"name": "Account"
+		},
+		{
+			"method": "API",
+			"url": "/api/",
+			"id": "account_create",
+			"input": "phone:Phone",
+			"name": "Create Account"
+		}
+	],
+	"plugins": [
+		{
+			"id": "account",
+			"name": "Account"
+		}
+	],
+	"actions": [
+		{
+			"name": "Account/exec"
+		},
+		{
+			"name": "Account/create",
+			"input": "phone:Phone"
+		}
+	]
+}
