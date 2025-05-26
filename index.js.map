@@ -16,6 +16,14 @@
 			"id": "account_create",
 			"input": "phone:Phone",
 			"name": "Create Account"
+		},
+		{
+			"method": "API",
+			"url": "/api/",
+			"id": "account_otp_verify",
+			"params": "value:string",
+			"input": "*phone:Phone",
+			"name": "Verify the otp client code"
 		}
 	],
 	"plugins": [
@@ -31,6 +39,11 @@
 		{
 			"name": "Account/create",
 			"input": "phone:Phone"
+		},
+		{
+			"name": "Account/otpverify",
+			"params": "*value:String",
+			"input": "*phone:Phone"
 		}
 	]
 }
