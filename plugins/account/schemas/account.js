@@ -6,7 +6,6 @@ NEWSCHEMA('Account', function(schema) {
             $.callback(user);
         }
     });
-
     schema.action('create', {
         name: 'Create Account',
         input: 'phone:Phone',
@@ -56,13 +55,9 @@ NEWSCHEMA('Account', function(schema) {
             let session = {};
             session.id = UID();
             session.userid = user.id;
-            session.token = ENCRYPTREQ($, { id: session }, CONF.passwordizor);
+            session.token = ENCRYPTREQ($, { id: session.id }, CONF.passwordizor);
             session.dtcreated = NOW;
             DATA.insert('tbl_session', session).callback($.done(session.token));
         }
-    })
-
-
-
-
+    });
 });
