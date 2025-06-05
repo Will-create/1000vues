@@ -6,4 +6,3 @@ exports.install = function() {
     ROUTE('-API /api/         +account_create --> Account/create');
     ROUTE('-API /api/         +account_otp_verify/{value} --> Account/otpverify');
 }
-
